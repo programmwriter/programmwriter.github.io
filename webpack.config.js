@@ -26,12 +26,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"]
+      },
+      {
+        test: /\.pug$/,
+        use: ["pug-loader"]
       }
     ]
   },
   plugins: [
     new HtmlWebPuckPlugin({
-      template: "./src/index.html",
+      template: "./src/index.pug",
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
