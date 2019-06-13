@@ -1,3 +1,4 @@
+const path = require("path");
 const HtmlWebPuckPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -30,6 +31,22 @@ module.exports = {
       {
         test: /\.pug$/,
         use: ["pug-loader"]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: "file-loader"
+            // options: {
+            //   limit: 5000,
+            //   name: "./misc/fonts/[name].[ext]"
+            // }
+          }
+        ]
       }
     ]
   },

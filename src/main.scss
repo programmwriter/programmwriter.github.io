@@ -1,0 +1,18 @@
+@import "./styles/_fonts.scss";
+
+$bg: #e5e5e5;
+$title: red;
+
+body {
+  background: $bg;
+}
+main {
+  font-family: $quicksand;
+  margin: auto;
+  background: #fff;
+  width: 1440px;
+  height: 900px;
+}
+.title {
+  color: $title;
+}
