@@ -4,4 +4,11 @@
   src: url("misc/fonts/Quicksand-Bold.ttf");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("misc/fonts/Montserrat-Regular.ttf");
+}
+
 $quicksand: "Quicksand", sans-serif;
+$montserrat: "Montserrat", sans-serif;
