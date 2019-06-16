@@ -1,0 +1,44 @@
+.colorsTypes {
+  background: #fff;
+  position: relative;
+  margin: auto;
+  width: 1440px;
+  height: 900px;
+}
+.colors {
+  margin: 0;
+  position: absolute;
+  width: 269.26px;
+  height: 610px;
+  left: 150px;
+  top: 145px;
+  list-style: none;
+  // background: #000;
+  border: 1px solid black;
+}
+.types {
+  position: absolute;
+  width: 403px;
+  height: 321px;
+  left: 846px;
+  top: 145px;
+  border: 1px solid black;
+}
+
+.colorBlock {
+  display: inline-block;
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  background: $darkShade;
+}
+.colorText {
+  margin-left: 15px;
+  margin-bottom: 7px;
+  padding: 5px;
+  display: inline-block;
+  width: 159px;
+  height: 57px;
+  background: #b0caf4;
+}

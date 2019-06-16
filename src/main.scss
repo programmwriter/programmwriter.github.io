@@ -1,19 +1,9 @@
 @import "./styles/_fonts.scss";
+@import "./styles/colors";
+@import "./pages/ui-kit/colorsType/colorsTypes_style.scss";
 
 $bg: #e5e5e5;
-$title: red;
 
 body {
   background: $bg;
-}
-main {
-  font-family: "Montserrat";
-  // font-family: $quicksand;
-  margin: auto;
-  background: #fff;
-  width: 1440px;
-  height: 900px;
-}
-.title {
-  color: $title;
 }
