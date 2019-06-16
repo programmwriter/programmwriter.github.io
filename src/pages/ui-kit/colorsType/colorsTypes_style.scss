@@ -26,7 +26,8 @@
 }
 
 .colorBlock {
-  display: inline-block;
+  position: relative;
+  float: left;
   margin: 0;
   width: 70px;
   height: 70px;
@@ -37,8 +38,16 @@
   margin-left: 15px;
   margin-bottom: 7px;
   padding: 5px;
-  display: inline-block;
+  position: relative;
+  float: right;
   width: 159px;
   height: 57px;
   background: #b0caf4;
+}
+.colorTitle {
+  font-family: $quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
 }
