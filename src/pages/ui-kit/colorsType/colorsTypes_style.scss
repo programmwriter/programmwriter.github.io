@@ -5,7 +5,7 @@
   width: 1440px;
   height: 900px;
 }
-.colors {
+.colorsContainer {
   margin: 0;
   position: absolute;
   width: 269.26px;
@@ -14,7 +14,7 @@
   top: 145px;
   list-style: none;
   // background: #000;
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 .types {
   position: absolute;
@@ -42,12 +42,19 @@
   float: right;
   width: 159px;
   height: 57px;
-  background: #b0caf4;
+  // background: #b0caf4;
 }
 .colorTitle {
   font-family: $quicksand;
   font-style: normal;
   font-weight: bold;
+  font-size: 19px;
+  line-height: 29px;
+}
+.colorHash {
+  font-family: $quicksand;
+  font-style: normal;
+  font-weight: normal;
   font-size: 19px;
   line-height: 29px;
 }
