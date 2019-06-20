@@ -1,3 +1,23 @@
+$colorMaps: (
+  1: $darkShade,
+  2: $darkShade75,
+  3: $darkShade50,
+  4: $darkShade25,
+  5: $darkShade05,
+  6: $purple,
+  7: $green
+);
+
+@mixin define_color($count, $color) {
+  .colorsContainer > div:nth-child(#{$count}) > .colorBlock {
+    background: $color;
+  }
+}
+
+@each $key, $color in $colorMaps {
+  @include define_color($key, $color);
+}
+
 .colorsTypes {
   background: #fff;
   position: relative;
@@ -12,9 +32,10 @@
   height: 610px;
   left: 150px;
   top: 145px;
-  list-style: none;
-  // background: #000;
-  // border: 1px solid black;
+}
+.colorItem {
+  padding-bottom: 15px;
+  overflow: hidden;
 }
 .types {
   position: absolute;
@@ -32,7 +53,7 @@
   width: 70px;
   height: 70px;
   border-radius: 6px;
-  background: $darkShade;
+  // background: $darkShade;
 }
 .colorText {
   margin-left: 15px;
@@ -42,8 +63,14 @@
   float: right;
   width: 159px;
   height: 57px;
-  // background: #b0caf4;
 }
+// .colorText::after {
+//   content: "";
+//   display: block;
+//   clear: both;
+//   height: 0px;
+//   visibility: hidden;
+// }
 .colorTitle {
   font-family: $quicksand;
   font-style: normal;
