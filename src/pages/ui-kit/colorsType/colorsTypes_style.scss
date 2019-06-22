@@ -1,3 +1,4 @@
+// color styles
 $colorMaps: (
   1: $darkShade,
   2: $darkShade75,
@@ -37,14 +38,6 @@ $colorMaps: (
   padding-bottom: 15px;
   overflow: hidden;
 }
-.types {
-  position: absolute;
-  width: 403px;
-  height: 321px;
-  left: 846px;
-  top: 145px;
-  border: 1px solid black;
-}
 
 .colorBlock {
   position: relative;
@@ -53,7 +46,6 @@ $colorMaps: (
   width: 70px;
   height: 70px;
   border-radius: 6px;
-  // background: $darkShade;
 }
 .colorText {
   margin-left: 15px;
@@ -84,4 +76,76 @@ $colorMaps: (
   font-weight: normal;
   font-size: 19px;
   line-height: 29px;
+}
+
+//types styles
+.typesContainer {
+  position: absolute;
+  width: 403px;
+  height: 321px;
+  left: 846px;
+  top: 145px;
+}
+
+.typesItem {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+  min-height: 15px;
+  overflow: hidden;
+}
+.typesTitle {
+  float: left;
+  position: relative;
+  font-family: $montserrat;
+  font-style: normal;
+  color: $darkShade25;
+  font-weight: normal;
+  width: 37px;
+  text-align: right;
+}
+.typesText {
+  position: relative;
+  float: right;
+  font-family: $quicksand;
+  font-style: normal;
+  color: $darkShade;
+  font-weight: bold;
+  text-align: left;
+  width: 336px;
+}
+.title1 {
+  font-size: 24px;
+  line-height: 29px;
+}
+.title2 {
+  font-size: 19px;
+  line-height: 23px;
+}
+.title3 {
+  font-size: 12px;
+  line-height: 15px;
+}
+.title4 {
+  font-size: 14px;
+  line-height: 24px;
+}
+.text1 {
+  font-size: 24px;
+  line-height: 30px;
+}
+.text2 {
+  font-size: 19px;
+  line-height: 24px;
+}
+.text3 {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+.text4 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $darkShade75;
 }
