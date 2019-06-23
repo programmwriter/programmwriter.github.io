@@ -1,0 +1,17 @@
+@import "./text_field/text_field.scss";
+
+.form_elements {
+  position: relative;
+  width: 1440px;
+  height: 1853px;
+  background: white;
+  margin: auto;
+}
+.column_container {
+  width: 324px;
+  height: 600px;
+  position: absolute;
+  left: 141px;
+  top: 163px;
+  // border: 1px solid black;
+}
