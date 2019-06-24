@@ -1,4 +1,5 @@
 @import "./text_field/text_field.scss";
+@import "./text_field_focused/text_field_focused.scss";
 
 .form_elements {
   position: relative;
@@ -8,7 +9,7 @@
   margin: auto;
 }
 .column_container {
-  width: 324px;
+  width: 320px;
   height: 600px;
   position: absolute;
   left: 141px;
