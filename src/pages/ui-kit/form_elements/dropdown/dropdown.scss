@@ -1,0 +1,57 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+.dropdown__input {
+  margin-top: 5px;
+  width: 320px;
+  height: 44px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  @include placeholder {
+    color: $darkShade75;
+    text-indent: 15px;
+    @include mixinFont($montserrat, normal, 14, 18);
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+    @include placeholder {
+      color: $darkShade75;
+      text-indent: 15px;
+      @include mixinFont($montserrat, normal, 14, 24);
+    }
+  }
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: red;
+    border: 1px solid $darkShade75;
+    position: absolute;
+    top: 30px;
+    left: 150px;
+  }
+  &::before {
+    content: "";
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 30px solid #fff;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -33px;
+  }
+}

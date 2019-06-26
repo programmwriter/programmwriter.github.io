@@ -68,14 +68,14 @@ $colorMaps: (
   font-style: normal;
   font-weight: bold;
   font-size: 19px;
-  line-height: 29px;
+  // line-height: 29px;
 }
 .colorHash {
   font-family: $quicksand;
   font-style: normal;
   font-weight: normal;
   font-size: 19px;
-  line-height: 29px;
+  // line-height: 29px;
 }
 
 //types styles
@@ -116,27 +116,27 @@ $colorMaps: (
 }
 .label1 {
   font-size: 24px;
-  line-height: 29px;
+  // line-height: 29px;
 }
 .label2 {
   font-size: 19px;
-  line-height: 23px;
+  // line-height: 23px;
 }
 .label3 {
   font-size: 12px;
-  line-height: 15px;
+  // line-height: 15px;
 }
 .label4 {
   font-size: 14px;
-  line-height: 24px;
+  // line-height: 24px;
 }
 .titleH1 {
   font-size: 24px;
-  line-height: 30px;
+  // line-height: 30px;
 }
 .titleH2 {
   font-size: 19px;
-  line-height: 24px;
+  // line-height: 24px;
 }
 .titleH3 {
   font-family: $quicksand;
@@ -144,7 +144,7 @@ $colorMaps: (
   color: $darkShade;
   font-weight: bold;
   font-size: 12px;
-  line-height: 15px;
+  // line-height: 15px;
   text-transform: uppercase;
 }
 .body_text {
@@ -152,4 +152,12 @@ $colorMaps: (
   font-size: 14px;
   line-height: 24px;
   color: $darkShade75;
+}
+@mixin H1() {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: $darkShade25;
+  font-size: 24px;
+  // line-height: 29px;
 }

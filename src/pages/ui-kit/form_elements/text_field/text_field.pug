@@ -1,4 +1,4 @@
-.textField
-  .textField__title Text Field
-  .textField__state Default
-  input(class="textField__input" type="text" placeholder="Email")
+mixin textField(id,title, stateText, placeholderText)  
+  label(for=id).textField__title #{title}
+  .textField__state #{stateText}
+  input(class!=attributes.class id=id type="text" placeholder=placeholderText)

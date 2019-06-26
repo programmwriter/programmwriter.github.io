@@ -1,4 +1,11 @@
+include /text_field/text_field.pug
+include /dropdown/dropdown.pug
+
 .form_elements
   .column_container
-    include /text_field/text_field.pug
-    include /text_field_focused/text_field_focused.pug
+    .itemBlock
+      +textField('textField',"text field","default","Email")(class="textField__input")
+    .itemBlock
+      +textField('textFieldFocused',"text field","Hover/Focus ","This is pretty awesome")(class="textField__input_focused")
+    .itemBlock
+      +dropdown("dropdown","default ","Сколько гостей")(class="dropdown__input")

@@ -1,5 +1,5 @@
 @import "./text_field/text_field.scss";
-@import "./text_field_focused/text_field_focused.scss";
+@import "./dropdown/dropdown.scss";
 
 .form_elements {
   position: relative;
@@ -15,4 +15,32 @@
   left: 141px;
   top: 163px;
   // border: 1px solid black;
+}
+.itemBlock {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+  // background: #66cdaa;
+}
+
+//text decoration
+.textField__title {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: $darkShade;
+  font-size: 12px;
+  line-height: 15px;
+  float: left;
+  text-transform: uppercase;
+}
+.textField__state {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: normal;
+  color: $darkShade50;
+  font-size: 12px;
+  line-height: 15px;
+  float: right;
+  text-transform: uppercase;
 }

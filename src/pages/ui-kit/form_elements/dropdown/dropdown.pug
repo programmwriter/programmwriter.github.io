@@ -1,0 +1,4 @@
+mixin dropdown(title, stateText, placeholderText)  
+  label(for="dropdown").textField__title #{title}
+  .textField__state #{stateText}
+  input(class!=attributes.class id="dropdown" type="text" placeholder=placeholderText)
