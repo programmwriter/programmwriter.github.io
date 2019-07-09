@@ -1,19 +1,29 @@
-//- var opt ={
-//-   dd_title:'',
-//-   dd_stateText:'',
-//-   placeholderText:''
-//- } 
-
-mixin dropdown(title, stateText, placeholderText)  
+mixin dropdown(title, stateText, placeholderText) 
   .textField__title #{title}
   .textField__state #{stateText}
   //- inputdropdown__select Сколько гостей(class!=attributes.class id="dropdown" type="text" placeholder=placeholderText)
-  .dropdown__input Сколько гостей
+  .dropdown__input #{placeholderText}
   ul.dropdown__list
     li.dropdown__item
       .dropdown__text Взрослые
-      button.dropdown__btnPlus +
-      .dropdown__value 0
-      button.dropdown__btnMinus -
+      .dropdown__btnContainer
+        button.dropdown__btnPlus -
+        p.dropdown__value 0
+        button.dropdown__btnMinus +
+    li.dropdown__item
+      .dropdown__text Дети
+      .dropdown__btnContainer
+        button.dropdown__btnPlus -
+        p.dropdown__value 0
+        button.dropdown__btnMinus +
+    li.dropdown__item
+      .dropdown__text Младенцы
+      .dropdown__btnContainer
+        button.dropdown__btnPlus -
+        p.dropdown__value 0
+        button.dropdown__btnMinus +
+
+script
+  include /script.js
 
 //- Все, понял. На li надо навесить display:flex, justify-content: space-between
