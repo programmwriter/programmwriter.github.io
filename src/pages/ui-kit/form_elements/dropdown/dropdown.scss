@@ -1,12 +1,3 @@
-.dropdown_clicked {
-  // border-top: 1px solid $darkShade75 !important;
-  // border-right: 1px solid $darkShade50 !important;
-  // border-left: 1px solid $darkShade50 !important;
-  border: 1px solid $darkShade50 !important;
-  color: $darkShade75;
-  text-indent: 15px;
-  @include mixinFont($montserrat, normal, 14, 44);
-}
 .dropdown__input {
   position: relative;
   margin-top: 20px;
@@ -76,7 +67,6 @@
   border-left: 1px solid $darkShade50;
   border-bottom: 1px solid $darkShade50;
   border-right: 1px solid $darkShade50;
-  // position: absolute;
   display: none;
 }
 .dropdown__item {
@@ -88,7 +78,7 @@
 
   button {
     @include mixinFont($montserrat, normal, 18, 22);
-    color: $darkShade50;
+    color: $darkShade25;
     text-align: center;
     background: none;
     border-radius: 50%;
@@ -99,8 +89,12 @@
     border-radius: 22px;
   }
 }
+.ddBtn_active {
+  color: $darkShade50 !important;
+  border: 1px solid $darkShade50 !important;
+}
+
 .dropdown__value {
-  // display: inline-block;
   width: 30px;
   height: 30px;
   line-height: 30px;

@@ -1,9 +1,9 @@
-mixin dropdown(title, stateText, placeholderText,optArr) 
+mixin dropdown(id,title, stateText, placeholderText,optArr) 
   .textField__title #{title}
   .textField__state #{stateText}
   .dropdown__input #{placeholderText}
     .dropdown__arrowBox      
-  ul.dropdown__list
+  ul(id=id).dropdown__list
     each val in optArr
       +ddListItem(val)
     
@@ -15,9 +15,9 @@ mixin ddListItem(itemObj)
   li.dropdown__item
       .dropdown__text #{itemObj.itemText}
       .dropdown__btnContainer
-        button.dropdown__btnPlus -
+        button(disabled="disabled").dropdown__btnMinus -
         p.dropdown__value #{itemObj.itemValue}
-        button.dropdown__btnMinus +
+        button.dropdown__btnPlus.ddBtn_active +
 
 
 //- Все, понял. На li надо навесить display:flex, justify-content: space-between
