@@ -1,25 +1,22 @@
-// console.log("privet vatrushki");
 document.addEventListener("DOMContentLoaded", () => {
-  const ddAll = document.querySelectorAll(".dropdown__input");
+  const ddArrowAll = document.querySelectorAll(".dropdown__arrowBox");
 
-  console.log(ddAll);
-  ddAll.forEach(function(element) {
-    // console.log(element.innerHTML);
-    element.addEventListener("click", evt => {
-      const ddList = element.nextSibling;
-      ddList.style.display === "block"
-        ? (ddList.style.display = "none")
-        : (ddList.style.display = "block");
+  ddArrowAll.forEach(function(element) {
+    element.addEventListener("click", () => {
+      const ddList = element.parentNode.nextSibling;
+      const ddInput = element.parentNode;
+      if (ddList.style.display === "block") {
+        ddList.style.display = "none";
+        // ddInput.classList.remove(".dropdown_clicked");
+        ddInput.className = ".dropdown__input";
+      } else {
+        ddList.style.display = "block";
+        ddInput.className = ".dropdown__input_clicked";
+      }
+
+      // ddList.style.display === "block"
+      //   ? (ddList.style.display = "none")
+      //   : (ddList.style.display = "block");
     });
   });
-  // dd.addEventListener("click", evt => {
-  //   const ddList = document.querySelector(
-  //     evt.target.classlist[0] + ".dropdown__list "
-  //   );
-  //   ddList.style.display === "block"
-  //     ? (ddList.style.display = "none")
-  //     : (ddList.style.display = "block");
-  //   console.log(ddList.style.display);
-  //   console.log(evt.target.classList[0]);
-  // });
 });
