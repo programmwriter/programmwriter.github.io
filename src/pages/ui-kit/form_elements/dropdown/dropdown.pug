@@ -1,30 +1,23 @@
-mixin dropdown(title, stateText, placeholderText) 
+mixin dropdown(title, stateText, placeholderText,optArr) 
   .textField__title #{title}
   .textField__state #{stateText}
-  //- inputdropdown__select Сколько гостей(class!=attributes.class id="dropdown" type="text" placeholder=placeholderText)
   .dropdown__input #{placeholderText}
     .dropdown__arrowBox      
   ul.dropdown__list
-    li.dropdown__item
-      .dropdown__text Взрослые
-      .dropdown__btnContainer
-        button.dropdown__btnPlus -
-        p.dropdown__value 0
-        button.dropdown__btnMinus +
-    li.dropdown__item
-      .dropdown__text Дети
-      .dropdown__btnContainer
-        button.dropdown__btnPlus -
-        p.dropdown__value 0
-        button.dropdown__btnMinus +
-    li.dropdown__item
-      .dropdown__text Младенцы
-      .dropdown__btnContainer
-        button.dropdown__btnPlus -
-        p.dropdown__value 0
-        button.dropdown__btnMinus +
+    each val in optArr
+      +ddListItem(val)
+    
 
 script
   include /script.js
+
+mixin ddListItem(itemObj)
+  li.dropdown__item
+      .dropdown__text #{itemObj.itemText}
+      .dropdown__btnContainer
+        button.dropdown__btnPlus -
+        p.dropdown__value #{itemObj.itemValue}
+        button.dropdown__btnMinus +
+
 
 //- Все, понял. На li надо навесить display:flex, justify-content: space-between

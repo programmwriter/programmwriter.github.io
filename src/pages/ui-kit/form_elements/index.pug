@@ -1,13 +1,15 @@
 include /text_field/text_field.pug
 include /dropdown/dropdown.pug
 
-.form_elements
+-
+  var optArr=[{itemText:'Взрослые',itemValue:0},       {itemText:'Дети',itemValue:0},{itemText:'Младенцы',itemValue:0}]
+.form_elements      
   .column_container
     .itemBlock
       +textField('textField',"text field","default","Email")(class="textField__input")
     .itemBlock
       +textField('textFieldFocused',"text field","Hover/Focus ","This is pretty awesome")(class="textField__input_focused")
     .itemBlock
-      +dropdown("dropdown","default ","Сколько гостей")(class="dropdown__input")
+      +dropdown("dropdown","default ","Сколько гостей",optArr)(class="dropdown__input")
     .itemBlock
-      +dropdown("dropdown","default ","Сколько друзей")(class="dropdown__input")
+      +dropdown("dropdown","default ","Сколько друзей",optArr)(class="dropdown__input")
