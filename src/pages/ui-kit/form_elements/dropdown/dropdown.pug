@@ -1,7 +1,8 @@
 mixin dropdown(id,title, stateText, placeholderText,optArr) 
   .textField__title #{title}
   .textField__state #{stateText}
-  .dropdown__input #{placeholderText}
+  .dropdown__input 
+    span #{placeholderText}
     .dropdown__arrowBox      
   ul(id=id).dropdown__list
     each val in optArr

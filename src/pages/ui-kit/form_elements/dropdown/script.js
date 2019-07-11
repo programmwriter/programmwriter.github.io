@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const ddArrowAll = document.querySelectorAll(".dropdown__arrowBox");
   let ddItemObj = {};
-  let count = 0;
+
   //обработчик появления списка
   ddArrowAll.forEach(function(element) {
     element.addEventListener("click", () => {
@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       //заполняем объект для данного дропдауна
+      //togo сделать отдельный объект по id дропдауна
       const ddItemList = ddList.querySelectorAll(".dropdown__item");
       ddItemList.forEach(element => {
         const ddItemText = element.querySelector(".dropdown__text").innerText;
@@ -23,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
           element.querySelector(".dropdown__value").innerText * 1;
         ddItemObj[ddItemText] = ddItemValue;
       });
-      console.log(ddItemObj);
     });
   });
   //*********************************************************************** */
@@ -33,13 +33,19 @@ document.addEventListener("DOMContentLoaded", () => {
     element.addEventListener("click", evt => {
       const ddItemBtnText = evt.target.parentNode.previousSibling.innerText;
       ddItemObj[ddItemBtnText]--;
+
       // клас актив кнопке минус и удаляем атрибут disabled
       if (ddItemObj[ddItemBtnText] === 0) {
         evt.target.classList.remove("ddBtn_active");
         evt.target.setAttribute("disabled", "disabled");
       }
+      //изменение значения при уменьшении количесвта
       evt.target.nextSibling.innerText = String(ddItemObj[ddItemBtnText]);
-      console.log(ddItemObj);
+
+      //изменение состояния инпута при уменьшении количества постояльцев
+      evt.target.parentNode.parentNode.parentNode.previousSibling.firstChild.nextSibling.innerText = ddString(
+        ddItemObj
+      );
     });
   });
   //********************************************************************* */
@@ -59,25 +65,35 @@ document.addEventListener("DOMContentLoaded", () => {
           "disabled"
         );
       }
+
+      //изменение значения при увеличении количесвта
       evt.target.previousSibling.innerText = String(ddItemObj[ddItemBtnText]);
-      let ddInputText =
-        evt.target.parentNode.parentNode.parentNode.previousSibling;
-      evt.target.parentNode.parentNode.parentNode.previousSibling.firstChild = ddString(
+
+      //изменение состояния инпута при увеличении количества постояльцев
+      evt.target.parentNode.parentNode.parentNode.previousSibling.firstChild.nextSibling.innerText = ddString(
         ddItemObj
       );
-      console.log(ddInputText);
-      console.log(ddString(ddItemObj));
     });
   });
-  console.log(ddBtnMinus);
 });
+
+//создание строки из нескольких
 function ddString(obj) {
   let arr = [];
   for (let key in obj) {
-    arr.push(` ${obj[key]} ${key}`);
+    arr.push(
+      ` ${obj[key]} ${num2str(obj[key], ["Ребенок", "Ребенка", "Детей"])}`
+    );
   }
   return arr.join();
 }
+// function ddString(obj) {
+//   let arr = [];
+//   for (let key in obj) {
+//     arr.push(` ${obj[key]} ${key}`);
+//   }
+//   return arr.join();
+// }
 function num2str(n, text_forms) {
   n = Math.abs(n) % 100;
   var n1 = n % 10;
