@@ -2,8 +2,8 @@ include /text_field/text_field.pug
 include /dropdown/dropdown.pug
 
 -
-  var optArr=[{itemText:'Взрослые',itemValue:0}]
-  //- var optArr=[{itemText:'Взрослые',itemValue:0},       {itemText:'Дети',itemValue:0},{itemText:'Младенцы',itemValue:0}]
+  var optArr=[{itemText:'Взрослые',itemValue:0},       {itemText:'Дети',itemValue:0},{itemText:'Младенцы',itemValue:0}]
+
 .form_elements      
   .column_container
     .itemBlock
@@ -12,4 +12,6 @@ include /dropdown/dropdown.pug
       +textField('textFieldFocused',"text field","Hover/Focus ","This is pretty awesome")(class="textField__input_focused")
     .itemBlock
       +dropdown('one',"dropdown","default ","Сколько гостей",optArr)(class="dropdown__input")
+    .itemBlock
+      +textField('MaskedTextField',"masked text tield","default","ДД.ММ.ГГГГ")(class="textField__input")
     

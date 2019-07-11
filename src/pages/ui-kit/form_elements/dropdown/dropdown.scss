@@ -60,6 +60,10 @@
     border-bottom: 2px solid $darkShade75;
   }
 }
+// .itemBlock > .dropdown__input ul {
+//   position: absolute;
+//   display: none;
+// }
 .dropdown__list {
   list-style: none;
   margin: 0;
@@ -68,7 +72,10 @@
   border-left: 1px solid $darkShade50;
   border-bottom: 1px solid $darkShade50;
   border-right: 1px solid $darkShade50;
+  // position: absolute;
   display: none;
+  // visibility: visible;
+  // overflow: hidden;
 }
 .dropdown__item {
   @include mixinFont($montserrat, bold, 14, 40);

@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const ddArrowAll = document.querySelectorAll(".dropdown__arrowBox");
   let ddItemObj = {};
 
-  //обработчик появления списка
   ddArrowAll.forEach(function(element) {
+    //обработчик появления списка
     element.addEventListener("click", () => {
       const ddList = element.parentNode.nextSibling;
       const ddInput = element.parentNode;
@@ -73,27 +73,31 @@ document.addEventListener("DOMContentLoaded", () => {
       evt.target.parentNode.parentNode.parentNode.previousSibling.firstChild.nextSibling.innerText = ddString(
         ddItemObj
       );
+      console.log(ddItemObj);
     });
   });
 });
 
 //создание строки из нескольких
 function ddString(obj) {
+  const multipleArr = [
+    { Взрослые: ["Взрослый", "Взрослых", "Взрослых"] },
+    { Дети: ["Ребенок", "Ребенка", "Детей"] },
+    { Младенцы: ["Младе..", "Младе..", "Младе.."] }
+  ];
   let arr = [];
   for (let key in obj) {
-    arr.push(
-      ` ${obj[key]} ${num2str(obj[key], ["Ребенок", "Ребенка", "Детей"])}`
-    );
+    multipleArr.map(el => {
+      if (el[key]) {
+        arr.push(` ${obj[key]} ${num2str(obj[key], el[key])}`);
+        // return el[key];
+      }
+    });
   }
+  console.log(arr.join());
   return arr.join();
 }
-// function ddString(obj) {
-//   let arr = [];
-//   for (let key in obj) {
-//     arr.push(` ${obj[key]} ${key}`);
-//   }
-//   return arr.join();
-// }
+//подстановка правильных форм слова в зависимости от количества
 function num2str(n, text_forms) {
   n = Math.abs(n) % 100;
   var n1 = n % 10;
