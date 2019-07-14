@@ -7,11 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
     element.addEventListener("click", () => {
       const ddList = element.parentNode.nextSibling;
       const ddInput = element.parentNode;
-      if (ddList.style.display === "block") {
-        ddList.style.display = "none";
+      // if (ddList.style.display === "block") {
+      if (ddInput.className === "dropdown__input_clicked") {
+        ddList.classList.remove("_expanded");
         ddInput.className = "dropdown__input";
       } else {
-        ddList.style.display = "block";
+        // ddList.style.display = "block";
+        // ddList.style.opacity = "1";
+        ddList.classList.add("_expanded");
         ddInput.className = "dropdown__input_clicked";
       }
 

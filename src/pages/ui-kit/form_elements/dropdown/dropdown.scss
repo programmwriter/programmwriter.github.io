@@ -60,22 +60,32 @@
     border-bottom: 2px solid $darkShade75;
   }
 }
-// .itemBlock > .dropdown__input ul {
+// .dropdown__input + ul {
 //   position: absolute;
-//   display: none;
 // }
+
 .dropdown__list {
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 320px;
+  overflow: hidden;
   box-sizing: border-box;
   border-left: 1px solid $darkShade50;
   border-bottom: 1px solid $darkShade50;
   border-right: 1px solid $darkShade50;
   // position: absolute;
+  // opacity: 0;
   display: none;
-  // visibility: visible;
+  // z-index: 0;
+  visibility: hidden;
   // overflow: hidden;
+}
+._expanded {
+  // opacity: 1;
+  display: block;
+  z-index: 100;
+  visibility: visible;
 }
 .dropdown__item {
   @include mixinFont($montserrat, bold, 14, 40);
