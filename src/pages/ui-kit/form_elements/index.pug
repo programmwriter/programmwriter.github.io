@@ -1,5 +1,6 @@
 include /text_field/text_field.pug
 include /dropdown/dropdown.pug
+include /dateDd/dateDd.pug
 
 -
   var optArr=[{itemText:'Взрослые',itemValue:0},       {itemText:'Дети',itemValue:0},{itemText:'Младенцы',itemValue:0}]
@@ -14,4 +15,6 @@ include /dropdown/dropdown.pug
       +dropdown('one',"dropdown","default ","Сколько гостей",optArr)(class="dropdown__input")
     .itemBlock
       +textField('MaskedTextField',"masked text tield","default","ДД.ММ.ГГГГ")(class="textField__input")
+    .itemBlock
+      +dateDd('MaskedTextField',"date dropdown","default","ДД.ММ.ГГГГ")(class="dateDd__input")
     

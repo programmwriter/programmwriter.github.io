@@ -1,6 +1,7 @@
-mixin dropdown(id,title, stateText, placeholderText,optArr) 
-  .textField__title #{title}
-  .textField__state #{stateText}
+mixin dropdown(id,title, stateText, placeholderText,optArr)
+  .dropdown_infoBox
+    .dropdown__title #{title}
+    .dropdown__state #{stateText}
   .dropdown__input 
     span #{placeholderText}
     .dropdown__arrowBox      

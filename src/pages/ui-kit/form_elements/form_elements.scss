@@ -1,5 +1,6 @@
 @import "./text_field/text_field.scss";
 @import "./dropdown/dropdown.scss";
+@import "./dateDd/dateDd.scss";
 
 .form_elements {
   position: relative;
@@ -17,14 +18,17 @@
   // border: 1px solid black;
 }
 .itemBlock {
+  // height: 84px;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
+  // overflow: visible;
   margin-bottom: 15px;
+  // height: 150px;
   // background: #66cdaa;
 }
-.itemBlock > ul {
-  position: absolute;
-}
+// .itemBlock > ul {
+//   position: absolute;
+// }
 
 //text decoration
 .textField__title {
@@ -36,6 +40,8 @@
   line-height: 15px;
   float: left;
   text-transform: uppercase;
+  // display: block;
+  position: static;
 }
 .textField__state {
   font-family: $montserrat;

@@ -1,0 +1,24 @@
+mixin dateDd(id,title, stateText, placeholderText,optArr)
+  .dateDd_infoBox
+    .dateDd__title #{title}
+    //- .dateDd__state #{stateText}
+  .dateDd__input 
+    span #{placeholderText}
+    .dateDd__arrowBox      
+  //- ul(id=id).dateDd__list
+  //-   each val in optArr
+  //-     +DsteddListItem(val)
+    
+
+script
+  include /dateDd.js
+
+mixin DateddListItem(itemObj)
+  li.dateDd__item
+      .dateDd__text #{itemObj.itemText}
+      .dateDd__btnContainer
+        button(disabled="disabled").dateDd__btnMinus -
+        p.dateDd__value #{itemObj.itemValue}
+        button.dateDd__btnPlus.ddBtn_active +
+
+
