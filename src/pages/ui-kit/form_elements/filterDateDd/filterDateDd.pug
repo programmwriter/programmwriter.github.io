@@ -1,0 +1,24 @@
+mixin filterDateDd(id,title, stateText, placeholderText,optArr)
+  .filterDateDd_infoBox
+    .filterDateDd__title #{title}
+    //- .filterDateDd__state #{stateText}
+  .filterDateDd__input 
+    span #{placeholderText}
+    .filterDateDd__arrowBox      
+  //- ul(id=id).filterDateDd__list
+  //-   each val in optArr
+  //-     +DsteddListItem(val)
+    
+
+script
+  include /filterDateDd.js
+
+mixin filterDateDdListItem(itemObj)
+  li.filterDateDd__item
+      .filterDateDd__text #{itemObj.itemText}
+      .filterDateDd__btnContainer
+        button(disabled="disabled").filterDateDd__btnMinus -
+        p.filterDateDd__value #{itemObj.itemValue}
+        button.filterDateDd__btnPlus.ddBtn_active +
+
+

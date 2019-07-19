@@ -1,6 +1,8 @@
 @import "./text_field/text_field.scss";
 @import "./dropdown/dropdown.scss";
 @import "./dateDd/dateDd.scss";
+@import "./filterDateDd/filterDateDd.scss";
+@import "./subTextField/subTextField.scss";
 
 .form_elements {
   position: relative;
@@ -18,13 +20,23 @@
   // border: 1px solid black;
 }
 .itemBlock {
-  // height: 84px;
   position: relative;
-  // overflow: hidden;
-  // overflow: visible;
   margin-bottom: 15px;
-  // height: 150px;
-  // background: #66cdaa;
+}
+.itemBlockFDd {
+  position: relative;
+  margin-top: 35px;
+}
+
+.itemTwoBlocks {
+  position: relative;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.itemBlockBox {
+  display: inline-block;
+  overflow: hidden;
 }
 // .itemBlock > ul {
 //   position: absolute;

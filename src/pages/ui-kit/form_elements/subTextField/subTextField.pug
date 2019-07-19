@@ -1,0 +1,4 @@
+mixin textField(id,title, placeholderText)  
+  label(for=id).textField__title #{title}
+  //- .textField__state #{stateText}
+  input(class!=attributes.class id=id type="text" placeholder=placeholderText)

@@ -1,6 +1,8 @@
 include /text_field/text_field.pug
 include /dropdown/dropdown.pug
 include /dateDd/dateDd.pug
+include /filterDateDd/filterDateDd.pug
+include /subTextField/subTextField.pug
 
 -
   var optArr=[{itemText:'Взрослые',itemValue:0},       {itemText:'Дети',itemValue:0},{itemText:'Младенцы',itemValue:0}]
@@ -15,6 +17,12 @@ include /dateDd/dateDd.pug
       +dropdown('one',"dropdown","default ","Сколько гостей",optArr)(class="dropdown__input")
     .itemBlock
       +textField('MaskedTextField',"masked text tield","default","ДД.ММ.ГГГГ")(class="textField__input")
-    .itemBlock
-      +dateDd('MaskedTextField',"date dropdown","default","ДД.ММ.ГГГГ")(class="dateDd__input")
-    
+    .itemTwoBlocks    
+      .itemBlockBox
+        +dateDd('MaskedTextField',"date dropdown","default","ДД.ММ.ГГГГ")(class="dateDd__input")
+      .itemBlockBox
+        +dateDd('MaskedTextField',"date dropdown","default","19.08.2019")(class="dateDd__input")
+    .itemBlockFDd
+      +filterDateDd('MaskedTextField',"filter date dropdown","default","19 авг - 23 авг")(class="dateDd__input")
+    .itemBlockFDd
+      +textField('subTextField',"Subscription Text Field ","Email")(class="subTextField__input")
