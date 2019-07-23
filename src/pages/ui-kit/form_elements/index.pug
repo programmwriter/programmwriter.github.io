@@ -6,7 +6,7 @@ include /subTextField/subTextField.pug
 
 -
   var optArr=[{itemText:'Взрослые',itemValue:0},       {itemText:'Дети',itemValue:0},{itemText:'Младенцы',itemValue:0}]
-
+npm
 .form_elements      
   .column_container
     .itemBlock
@@ -25,4 +25,4 @@ include /subTextField/subTextField.pug
     .itemBlockFDd
       +filterDateDd('MaskedTextField',"filter date dropdown","default","19 авг - 23 авг")(class="dateDd__input")
     .itemBlockFDd
-      +textField('subTextField',"Subscription Text Field ","Email")(class="subTextField__input")
+      +subTextField('subTextField',"Subscription Text Field ","Email")(class="subTextField__input")

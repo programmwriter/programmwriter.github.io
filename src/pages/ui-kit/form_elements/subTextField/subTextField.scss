@@ -59,25 +59,12 @@
     }
   }
 }
-.subTextField__arrowBox {
-  z-index: 10;
-  width: 44px;
-  height: 43px;
-  float: right;
-  cursor: pointer;
-  &::after {
-    content: "";
-    width: 7px;
-    height: 7px;
-    border-right: 2px solid $darkShade50;
-    border-bottom: 2px solid $darkShade50;
-    position: absolute;
-    top: 15px;
-    left: 290px;
-    transform: rotate(45deg);
-  }
-  &:hover::after {
-    border-right: 2px solid $darkShade75;
-    border-bottom: 2px solid $darkShade75;
-  }
+.subTextField__box {
+  // overflow: hidden;
+  position: relative;
+}
+.subTextField__arrow {
+  position: absolute;
+  top: 33px;
+  left: 235px;
 }
