@@ -11,18 +11,24 @@
   background: white;
   margin: auto;
 }
+.toxin__logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
 .column_container {
   width: 320px;
-  height: 600px;
+  height: 900px;
   position: absolute;
   left: 141px;
-  top: 163px;
+  top: 140px;
   // border: 1px solid black;
 }
 .itemBlock {
   position: relative;
   margin-bottom: 15px;
 }
+
 .itemBlockFDd {
   position: relative;
   margin-top: 35px;
@@ -37,6 +43,10 @@
 .itemBlockBox {
   display: inline-block;
   overflow: hidden;
+}
+.itemBlockDd {
+  position: relative;
+  margin-top: 100px;
 }
 // .itemBlock > ul {
 //   position: absolute;

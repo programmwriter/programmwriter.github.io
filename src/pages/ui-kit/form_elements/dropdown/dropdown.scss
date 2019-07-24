@@ -1,6 +1,14 @@
 .dropdown_infoBox {
   overflow: hidden;
 }
+.dropdown_bigBlock {
+  overflow: hidden;
+  width: 320px;
+}
+.dropdown_smallBlock {
+  overflow: hidden;
+  width: 266px;
+}
 .dropdown__title {
   font-family: $montserrat;
   font-style: normal;
@@ -10,8 +18,6 @@
   line-height: 15px;
   float: left;
   text-transform: uppercase;
-  // display: block;
-  // position: static;
 }
 .dropdown__state {
   font-family: $montserrat;
@@ -27,7 +33,8 @@
 .dropdown__input {
   position: relative;
   margin-top: 5px;
-  width: 320px;
+  // width: 266px;
+  width: auto;
   height: 44px;
   box-sizing: border-box;
   border-radius: 4px;
@@ -47,7 +54,8 @@
 .dropdown__input_clicked {
   position: relative;
   margin-top: 5px;
-  width: 320px;
+  // width: 266px;
+  width: auto;
   height: 44px;
   box-sizing: border-box;
   border-radius: 4px 4px 0 0;
@@ -78,7 +86,7 @@
     border-bottom: 2px solid $darkShade50;
     position: absolute;
     top: 15px;
-    left: 290px;
+    right: 15px;
     transform: rotate(45deg);
   }
   &:hover::after {
@@ -96,23 +104,19 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 320px;
+  // width: 266px;
+  width: inherit;
   overflow: hidden;
   box-sizing: border-box;
   border-left: 1px solid $darkShade50;
   border-bottom: 1px solid $darkShade50;
   border-right: 1px solid $darkShade50;
   position: absolute;
-  // opacity: 0;
   display: none;
-  // z-index: 0;
   visibility: hidden;
-  // overflow: hidden;
   background: white;
 }
 ._expanded {
-  // background: green;
-  // opacity: 1;
   display: block;
   z-index: 100;
   visibility: visible;
@@ -120,6 +124,7 @@
 .dropdown__item {
   @include mixinFont($montserrat, bold, 14, 40);
   height: 40px;
+  width: inherit;
   text-indent: 15px;
   display: flex;
   justify-content: space-between;

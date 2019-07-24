@@ -1,14 +1,15 @@
-mixin dropdown(id,title, stateText, placeholderText,optArr)
-  .dropdown_infoBox
-    .dropdown__title #{title}
-    .dropdown__state #{stateText}
-  .dropdown__input 
-    span #{placeholderText}
-    .dropdown__arrowBox      
-  ul(id=id).dropdown__list
-    each val in optArr
-      +ddListItem(val)
-    
+mixin dropdown(id,title, stateText, placeholderText,optArr,blockWidth)
+  div(class="dropdown_" + blockWidth)
+    .dropdown_infoBox
+      .dropdown__title #{title}
+      .dropdown__state #{stateText}
+    .dropdown__input 
+      span #{placeholderText}
+      .dropdown__arrowBox      
+    ul(id=id).dropdown__list
+      each val in optArr
+        +ddListItem(val)
+      
 
 script
   include /script.js
