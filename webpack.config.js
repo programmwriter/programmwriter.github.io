@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebPuckPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
@@ -25,9 +26,13 @@ module.exports = {
         ]
       },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: ["style-loader", "css-loader", "sass-loader"]
       },
+      // {
+      //   test: /\.css$/,
+      //   loaders: ["style-loader", "css-loader"]
+      // },
       {
         test: /\.pug$/,
         use: ["pug-loader"]
@@ -51,6 +56,12 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.$": "jquery",
+      "window.jQuery": "jquery"
+    }),
     new HtmlWebPuckPlugin({
       template: "./src/index.pug",
       filename: "./index.html"

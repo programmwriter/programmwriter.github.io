@@ -1,3 +1,14 @@
+$(document).ready(function() {
+  $(".dropdown__title").click(function() {
+    $(this)
+      .next(".dropdown__state")
+      .toggleClass("clicked");
+    // .css("color", "red");
+    // $(".dropdown__state").css("color", "red");
+    // alert("ppppppppppp");
+  });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
   const ddArrowAll = document.querySelectorAll(".dropdown__arrowBox");
   let ddItemObj = {};
