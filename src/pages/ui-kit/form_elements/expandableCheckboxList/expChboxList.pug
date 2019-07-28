@@ -1,0 +1,15 @@
+mixin expChboxList(arrText)
+  .expChboxList
+    .expChboxList__title expandable checkbox list
+    .expChboxList__content
+      each val in arrText
+        +expChboxListItems(val)
+
+          
+
+
+mixin expChboxListItems(text)
+  label.expChboxList__item #{text}
+    input(class="expChboxList__input" type='checkbox')
+    span.expChboxList__checkmark
+    

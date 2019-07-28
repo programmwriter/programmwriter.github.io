@@ -1,0 +1,104 @@
+.expChboxList {
+  position: relative;
+}
+.expChboxList__title {
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: $darkShade;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+/* The container */
+.expChboxList__item {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: $darkShade50;
+  @include mixinFont($montserrat, normal, 14, 18);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.expChboxList__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+/* Create a custom checkbox */
+.expChboxList__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.expChboxList__item .expChboxList__input:checked ~ .expChboxList__checkmark {
+  border: 1px solid #bc9cff;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.expChboxList__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Create the checkmark/indicator (hidden when not checked) */
+.expChboxList__checkmark:before {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 6px;
+  top: 4px;
+  width: 6px;
+  height: 8px;
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 10;
+}
+/* Show the checkmark when checked */
+.expChboxList__item
+  .expChboxList__input:checked
+  ~ .expChboxList__checkmark:before {
+  display: block;
+}
+
+/* Show the checkmark when checked */
+.expChboxList__item
+  .expChboxList__input:checked
+  ~ .expChboxList__checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.expChboxList__item .expChboxList__checkmark:after {
+  left: 6px;
+  top: 4px;
+  width: 4px;
+  height: 6px;
+  background: white;
+  background-clip: padding-box;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 100;
+}

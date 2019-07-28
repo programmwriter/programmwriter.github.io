@@ -1,14 +1,40 @@
-$(document).ready(function() {
-  $(".dropdown__title").click(function() {
-    $(this)
-      .next(".dropdown__state")
-      .toggleClass("clicked");
-    // .css("color", "red");
-    // $(".dropdown__state").css("color", "red");
-    // alert("ppppppppppp");
-  });
-});
+// $(document).ready(function() {
+//   $(".dropdown__title").click(function() {
+//     $(this)
+//       .next(".dropdown__state")
+//       .toggleClass("clicked");
+//     // .css("color", "red");
+//     // $(".dropdown__state").css("color", "red");
+//     // alert("ppppppppppp");
+//   });
+// });
+// $(document).ready(function($) {
+//   $(document).mouseup(function(e) {
+//     const ddNoClick = $(".dropdown__input_clicked");
+//     const ddListNoClick = ddNoClick.next();
 
+//     console.log("ddNoClick= " + ddNoClick);
+//     console.log("ddListNoClick= " + ddListNoClick);
+//     console.log("e.target= " + e.target);
+
+//     if (
+//       !ddNoClick.is(e.target) &&
+//       !ddListNoClick.is(e.target) &&
+//       ddListNoClick.has(e.target).length === 0
+//     ) {
+//       ddNoClick.toggleClass("_expanded");
+//       console.log("pissssskaaa");
+//     }
+//   });
+// });
+$(document).ready(function($) {
+  const ddList = $("#three");
+  ddList.addClass("_expanded");
+  ddList
+    .prev()
+    .removeClass("dropdown__input")
+    .addClass("dropdown__input_clicked");
+});
 document.addEventListener("DOMContentLoaded", () => {
   const ddArrowAll = document.querySelectorAll(".dropdown__arrowBox");
   let ddItemObj = {};
