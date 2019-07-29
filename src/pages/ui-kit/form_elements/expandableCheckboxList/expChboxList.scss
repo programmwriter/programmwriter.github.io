@@ -2,6 +2,7 @@
   position: relative;
 }
 .expChboxList__title {
+  position: relative;
   font-family: $montserrat;
   font-style: normal;
   font-weight: bold;
@@ -10,8 +11,33 @@
   line-height: 15px;
   margin-bottom: 17px;
   text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 6px;
+    border: solid $darkShade50;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    top: 1px;
+    left: 235px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 }
-/* The container */
+.rotate::after {
+  transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+}
+/* The container*/
+.expChboxList__content {
+  background: white;
+  min-width: 266px;
+}
+/* The container of item*/
 .expChboxList__item {
   display: block;
   position: relative;
@@ -101,4 +127,14 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 100;
+}
+
+.expChboxList__content {
+  display: none;
+  position: absolute;
+  overflow: auto;
+  z-index: 1;
+}
+.show {
+  display: block;
 }
