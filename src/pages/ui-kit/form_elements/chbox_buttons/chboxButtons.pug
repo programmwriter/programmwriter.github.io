@@ -1,0 +1,14 @@
+mixin chboxButtons(arrText)
+  .chboxButtons
+    .chboxButtons__title checkbox buttons
+    .chboxButtons__content
+      each val in arrText
+        +chboxButtonsItems(val)
+
+          
+
+
+mixin chboxButtonsItems(text)
+  label.chboxButtons__item #{text}
+    input(class="chboxButtons__input" type='checkbox')
+    span.chboxButtons__checkmark

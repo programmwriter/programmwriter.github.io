@@ -1,0 +1,96 @@
+.radioButtons {
+  position: relative;
+}
+.radioButtons__title {
+  position: relative;
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: $darkShade;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+/* The container*/
+.radioButtons__content {
+  background: white;
+  width: 240px;
+  // display: block;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  overflow: auto;
+  z-index: 1;
+}
+/* The container of item*/
+.radioButtons__item {
+  // display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  color: $darkShade50;
+  @include mixinFont($montserrat, normal, 14, 18);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Hide the browser's default checkbox */
+.radioButtons__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.active {
+  color: $darkShade75;
+}
+/* Create a custom checkbox */
+.radioButtons__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, add a blue background */
+.radioButtons__item .radioButtons__input:checked + .radioButtons__item {
+  color: $darkShade75;
+}
+/* When the checkbox is checked, add a blue background */
+.radioButtons__item .radioButtons__input:checked ~ .radioButtons__checkmark {
+  border: 1px solid #bc9cff;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.radioButtons__checkmark:before {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 10;
+}
+/* Show the checkmark when checked */
+.radioButtons__item
+  .radioButtons__input:checked
+  ~ .radioButtons__checkmark:before {
+  display: block;
+}

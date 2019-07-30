@@ -1,0 +1,11 @@
+mixin radioButtons(arrText)
+  .radioButtons
+    .radioButtons__title Radio Buttons
+    .radioButtons__content
+      each val in arrText
+        +radioButtonsItems(val)   
+
+mixin radioButtonsItems(text)
+  label.radioButtons__item #{text}
+    input(class="radioButtons__input" type='radio' name="radio")
+    span.radioButtons__checkmark

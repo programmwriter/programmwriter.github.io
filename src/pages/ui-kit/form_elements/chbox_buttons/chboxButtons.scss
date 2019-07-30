@@ -1,7 +1,7 @@
-.expChboxList {
+.chboxButtons {
   position: relative;
 }
-.expChboxList__title {
+.chboxButtons__title {
   position: relative;
   font-family: $montserrat;
   font-style: normal;
@@ -11,36 +11,18 @@
   line-height: 15px;
   margin-bottom: 17px;
   text-transform: uppercase;
-  &:hover {
-    cursor: pointer;
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    height: 6px;
-    width: 6px;
-    border: solid $darkShade50;
-    border-width: 0 2px 2px 0;
-    display: inline-block;
-    top: 1px;
-    left: 235px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
-}
-//Поворачивает стрелку при клике
-.rotate::after {
-  top: 5px;
-  transform: rotate(225deg);
-  -webkit-transform: rotate(225deg);
 }
 /* The container*/
-.expChboxList__content {
+.chboxButtons__content {
   background: white;
-  min-width: 266px;
+  width: 240px;
+  display: block;
+  position: absolute;
+  overflow: auto;
+  z-index: 1;
 }
 /* The container of item*/
-.expChboxList__item {
+.chboxButtons__item {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -54,7 +36,7 @@
   user-select: none;
 }
 /* Hide the browser's default checkbox */
-.expChboxList__input {
+.chboxButtons__input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -62,7 +44,7 @@
   width: 0;
 }
 /* Create a custom checkbox */
-.expChboxList__checkmark {
+.chboxButtons__checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -75,19 +57,19 @@
 }
 
 /* When the checkbox is checked, add a blue background */
-.expChboxList__item .expChboxList__input:checked ~ .expChboxList__checkmark {
+.chboxButtons__item .chboxButtons__input:checked ~ .chboxButtons__checkmark {
   border: 1px solid #bc9cff;
   box-sizing: border-box;
   border-radius: 4px;
 }
 /* Create the checkmark/indicator (hidden when not checked) */
-.expChboxList__checkmark:after {
+.chboxButtons__checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 /* Create the checkmark/indicator (hidden when not checked) */
-.expChboxList__checkmark:before {
+.chboxButtons__checkmark:before {
   content: "";
   position: absolute;
   display: none;
@@ -102,21 +84,21 @@
   z-index: 10;
 }
 /* Show the checkmark when checked */
-.expChboxList__item
-  .expChboxList__input:checked
-  ~ .expChboxList__checkmark:before {
+.chboxButtons__item
+  .chboxButtons__input:checked
+  ~ .chboxButtons__checkmark:before {
   display: block;
 }
 
 /* Show the checkmark when checked */
-.expChboxList__item
-  .expChboxList__input:checked
-  ~ .expChboxList__checkmark:after {
+.chboxButtons__item
+  .chboxButtons__input:checked
+  ~ .chboxButtons__checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.expChboxList__item .expChboxList__checkmark:after {
+.chboxButtons__item .chboxButtons__checkmark:after {
   left: 6px;
   top: 4px;
   width: 4px;
@@ -129,14 +111,4 @@
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   z-index: 100;
-}
-
-.expChboxList__content {
-  display: none;
-  position: absolute;
-  overflow: auto;
-  z-index: 1;
-}
-.show {
-  display: block;
 }

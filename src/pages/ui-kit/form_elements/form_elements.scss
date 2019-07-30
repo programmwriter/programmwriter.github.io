@@ -4,6 +4,9 @@
 @import "./filterDateDd/filterDateDd.scss";
 @import "./subTextField/subTextField.scss";
 @import "./expandableCheckboxList/expChboxList.scss";
+@import "./Icon_Text_List/iconText.scss";
+@import "./chbox_buttons/chboxButtons.scss";
+@import "./radio_buttons/radioButtons.scss";
 
 .form_elements {
   position: relative;
@@ -11,6 +14,8 @@
   height: 1853px;
   background: white;
   margin: auto;
+  display: flex;
+  justify-content: flex-start;
 }
 .toxin__logo {
   position: absolute;
@@ -19,22 +24,18 @@
 }
 .column_container {
   width: 320px;
-  height: 900px;
-  position: absolute;
-  left: 141px;
-  top: 140px;
-  // border: 1px solid black;
+  height: 1600px;
+  margin-top: 150px;
+  margin-left: 140px;
 }
 .itemBlock {
   position: relative;
   margin-bottom: 15px;
 }
-
 .itemBlockFDd {
   position: relative;
   margin-top: 35px;
 }
-
 .itemTwoBlocks {
   position: relative;
   margin-top: 35px;
@@ -49,10 +50,6 @@
   position: relative;
   margin-top: 100px;
 }
-// .itemBlock > ul {
-//   position: absolute;
-// }
-
 //text decoration
 .textField__title {
   font-family: $montserrat;
@@ -63,7 +60,6 @@
   line-height: 15px;
   float: left;
   text-transform: uppercase;
-  // display: block;
   position: static;
 }
 .textField__state {

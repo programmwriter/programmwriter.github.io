@@ -3,12 +3,13 @@ include /dropdown/dropdown.pug
 include /dateDd/dateDd.pug
 include /filterDateDd/filterDateDd.pug
 include /subTextField/subTextField.pug
-include expandableCheckboxList/expChboxList.pug
-
-
+include /expandableCheckboxList/expChboxList.pug
+include /Icon_Text_List/iconText.pug
+include /chbox_buttons/chboxButtons.pug
+include /radio_buttons/radioButtons.pug
 -
   var optArr={rooms:[{itemText:'спальни',itemValue:0}, {itemText:'кровати',itemValue:0},{itemText:'ванные комнаты',itemValue:0}],guests:[{itemText:'взрослые',itemValue:0}, {itemText:'дети',itemValue:0},{itemText:'младенцы',itemValue:0}],}
-npm
+
 .form_elements
   //- img(src=require("mini.png"),  width='30', height='30', alt='toxin-logo') 
   svg(class = "toxin__logo" width='48', height='48', viewBox='0 0 48 48', fill='none', xmlns='http://www.w3.org/2000/svg')
@@ -41,4 +42,13 @@ npm
       +expChboxList(["Завтрак","Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь","Телевизор", "Шампунь" ])
     .itemBlockDd(style="margin-top:50px")
       +expChboxList(["Завтрак","Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь","Телевизор", "Шампунь" ])
+    .itemBlockDd(style="margin-top:260px")
+      +iconText
+  .column_container
+    .itemBlockDd(style="margin-top:0px")
+      +chboxButtons(["Можно курить","Можно с питомцами"," Можно пригласить гостей (до 10 человек)"])
+    .itemBlockDd(style="margin-top:155px")
+      +radioButtons(["Мужчина","Женщина"])
+    
+
   
