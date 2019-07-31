@@ -1,0 +1,69 @@
+.toogle {
+  position: relative;
+  display: block;
+}
+.toggle__title {
+  position: relative;
+  font-family: $montserrat;
+  font-style: normal;
+  font-weight: bold;
+  color: $darkShade;
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 17px;
+  text-transform: uppercase;
+}
+.toggle__item {
+  position: relative;
+  display: block;
+  padding-left: 50px;
+  margin-bottom: 14px;
+  color: $darkShade75;
+  @include mixinFont($montserrat, normal, 14, 18);
+}
+.toggle__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 18px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid $darkShade25;
+  -webkit-transition: 0.4s;
+  -moz--transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 10px;
+  &::before {
+    border-radius: 10px;
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    left: 4px;
+    bottom: 3px;
+    background-color: $darkShade25;
+    -webkit-transition: 0.4s;
+    -moz--transition: 0.4s;
+    transition: 0.4s;
+  }
+}
+
+.toggle__input:checked + .toggle__slider {
+  border: 1px solid #bc9cff;
+  // box-sizing: border-box;
+}
+
+.toggle__input:checked + .toggle__slider::before {
+  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
