@@ -1,6 +1,7 @@
 mixin likeButtons()
   .likeButtons
     .likeButtons__title like button
-    .likeButtons__item
-      .likeButtons__heart
-      .likeButtons__number
+    .likeButtons__itemBox
+      .likeButtons__item
+        img(class="likeButtons__heart" src=require("./misc/images/like-heart.svg"),width="12" height="12" alt="like-heart")
+        .likeButtons__number 2

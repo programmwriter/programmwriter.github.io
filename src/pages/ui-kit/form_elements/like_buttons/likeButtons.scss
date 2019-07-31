@@ -12,9 +12,24 @@
   margin-bottom: 17px;
   text-transform: uppercase;
 }
+.likeButtons__itemBox {
+  position: relative;
+  display: flex;
+}
 .likeButtons__item {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border: 1px solid $darkShade25;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
 }
 .likeButtons__heart {
 }
 .likeButtons__number {
+  @include mixinFont($montserrat, normal, 10, 12);
+  color: $darkShade25;
 }
