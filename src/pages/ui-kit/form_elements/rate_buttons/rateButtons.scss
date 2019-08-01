@@ -1,0 +1,25 @@
+.rateButtons {
+  position: relative;
+  &__title {
+    @include mixTitle;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 310px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 140px;
+    & img {
+      width: 24px;
+      height: 24px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

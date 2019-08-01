@@ -1,0 +1,19 @@
+mixin rateButtons()
+  .rateButtons
+    .rateButtons__title rate buttons
+    .rateButtons__container
+      .rateButtons__box
+        +rateButtonsStar
+        +rateButtonsStar
+        +rateButtonsStar
+        +rateButtonsStar
+        +rateButtonsStar
+      .rateButtons__box
+        +rateButtonsStar
+        +rateButtonsStar
+        +rateButtonsStar
+        +rateButtonsStar
+        +rateButtonsStar
+        
+mixin rateButtonsStar()
+  img(src="src/misc/images/rate-star_deactive.svg", alt="star")

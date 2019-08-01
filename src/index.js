@@ -6,5 +6,6 @@ import "./pages/ui-kit/form_elements/chbox_buttons/chboxButtons";
 import "./pages/ui-kit/form_elements/radio_buttons/radioButtons";
 import "./pages/ui-kit/form_elements/toggle/toggle.js";
 import "./pages/ui-kit/form_elements/like_buttons/likeButtons.js";
+import "./pages/ui-kit/form_elements/rate_buttons/rateButtons.js";
 require("webpack-jquery-ui");
 require("webpack-jquery-ui/css");
