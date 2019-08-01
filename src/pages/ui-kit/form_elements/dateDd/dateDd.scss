@@ -2,16 +2,8 @@
   overflow: hidden;
 }
 .dateDd__title {
-  font-family: $montserrat;
-  font-style: normal;
-  font-weight: bold;
-  color: $darkShade;
-  font-size: 12px;
-  line-height: 15px;
+  @include mixTitle(5);
   float: left;
-  text-transform: uppercase;
-  // display: block;
-  // position: static;
 }
 .dateDd__state {
   font-family: $montserrat;

@@ -2,15 +2,7 @@
   position: relative;
 }
 .expChboxList__title {
-  position: relative;
-  font-family: $montserrat;
-  font-style: normal;
-  font-weight: bold;
-  color: $darkShade;
-  font-size: 12px;
-  line-height: 15px;
-  margin-bottom: 17px;
-  text-transform: uppercase;
+  @include mixTitle;
   &:hover {
     cursor: pointer;
   }
@@ -68,67 +60,28 @@
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  // background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
 }
-
-/* When the checkbox is checked, add a blue background */
+// create check indikator
+.expChboxList__check {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+/* When the checkbox is checked, add border color */
 .expChboxList__item .expChboxList__input:checked ~ .expChboxList__checkmark {
   border: 1px solid #bc9cff;
   box-sizing: border-box;
   border-radius: 4px;
 }
-/* Create the checkmark/indicator (hidden when not checked) */
-.expChboxList__checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* Create the checkmark/indicator (hidden when not checked) */
-.expChboxList__checkmark:before {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 6px;
-  top: 4px;
-  width: 6px;
-  height: 8px;
-  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 10;
-}
-/* Show the checkmark when checked */
-.expChboxList__item
-  .expChboxList__input:checked
-  ~ .expChboxList__checkmark:before {
-  display: block;
-}
 
-/* Show the checkmark when checked */
-.expChboxList__item
-  .expChboxList__input:checked
-  ~ .expChboxList__checkmark:after {
+/* Show the chec indicator when checked */
+.expChboxList__item .expChboxList__input:checked ~ .expChboxList__check {
   display: block;
-}
-
-/* Style the checkmark/indicator */
-.expChboxList__item .expChboxList__checkmark:after {
-  left: 6px;
-  top: 4px;
-  width: 4px;
-  height: 6px;
-  background: white;
-  background-clip: padding-box;
-  border: solid transparent;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 100;
 }
 
 .expChboxList__content {

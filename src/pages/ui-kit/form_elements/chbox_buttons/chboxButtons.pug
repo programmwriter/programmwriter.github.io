@@ -11,4 +11,5 @@ mixin chboxButtons(arrText)
 mixin chboxButtonsItems(text)
   label.chboxButtons__item #{text}
     input(class="chboxButtons__input" type='checkbox')
+    img(class="chboxButtons__check" src=require("./misc/images/check-gradient.svg"), alt="check" width="12" height="10")
     span.chboxButtons__checkmark

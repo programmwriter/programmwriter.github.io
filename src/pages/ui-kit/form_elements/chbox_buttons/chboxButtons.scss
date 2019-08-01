@@ -2,15 +2,7 @@
   position: relative;
 }
 .chboxButtons__title {
-  position: relative;
-  font-family: $montserrat;
-  font-style: normal;
-  font-weight: bold;
-  color: $darkShade;
-  font-size: 12px;
-  line-height: 15px;
-  margin-bottom: 17px;
-  text-transform: uppercase;
+  @include mixTitle();
 }
 /* The container*/
 .chboxButtons__content {
@@ -43,6 +35,14 @@
   height: 0;
   width: 0;
 }
+
+// create check indikator
+.chboxButtons__check {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
 /* Create a custom checkbox */
 .chboxButtons__checkmark {
   position: absolute;
@@ -50,7 +50,6 @@
   left: 0;
   height: 20px;
   width: 20px;
-  background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
@@ -62,53 +61,8 @@
   box-sizing: border-box;
   border-radius: 4px;
 }
-/* Create the checkmark/indicator (hidden when not checked) */
-.chboxButtons__checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-/* Create the checkmark/indicator (hidden when not checked) */
-.chboxButtons__checkmark:before {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 6px;
-  top: 4px;
-  width: 6px;
-  height: 8px;
-  background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 10;
-}
-/* Show the checkmark when checked */
-.chboxButtons__item
-  .chboxButtons__input:checked
-  ~ .chboxButtons__checkmark:before {
-  display: block;
-}
 
 /* Show the checkmark when checked */
-.chboxButtons__item
-  .chboxButtons__input:checked
-  ~ .chboxButtons__checkmark:after {
+.chboxButtons__item .chboxButtons__input:checked ~ .chboxButtons__check {
   display: block;
-}
-
-/* Style the checkmark/indicator */
-.chboxButtons__item .chboxButtons__checkmark:after {
-  left: 6px;
-  top: 4px;
-  width: 4px;
-  height: 6px;
-  background: white;
-  background-clip: padding-box;
-  border: solid transparent;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  z-index: 100;
 }

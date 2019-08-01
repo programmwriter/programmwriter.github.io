@@ -2,15 +2,7 @@
   position: relative;
 }
 .radioButtons__title {
-  position: relative;
-  font-family: $montserrat;
-  font-style: normal;
-  font-weight: bold;
-  color: $darkShade;
-  font-size: 12px;
-  line-height: 15px;
-  margin-bottom: 17px;
-  text-transform: uppercase;
+  @include mixTitle();
 }
 /* The container*/
 .radioButtons__content {

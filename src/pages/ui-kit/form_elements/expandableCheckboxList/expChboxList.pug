@@ -11,5 +11,6 @@ mixin expChboxList(arrText)
 mixin expChboxListItems(text)
   label.expChboxList__item #{text}
     input(class="expChboxList__input" type='checkbox')
+    img(class="expChboxList__check" src=require("./misc/images/check-gradient.svg"), alt="check" width="12" height="10")
     span.expChboxList__checkmark
     
