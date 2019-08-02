@@ -10,6 +10,7 @@ include /radio_buttons/radioButtons.pug
 include /toggle/toggle.pug
 include /like_buttons/likeButtons.pug
 include /rate_buttons/rateButtons.pug
+include /range_slider/rangeSlider.pug
 
 
 -
@@ -55,6 +56,10 @@ include /rate_buttons/rateButtons.pug
       +likeButtons(["2","12"])
     .itemBlockDd(style="margin-top:44px")
       +rateButtons()
+
+  .column_container
+    .itemBlockDd(style="margin-top:0")
+      +rangeSlider()
     
 
   

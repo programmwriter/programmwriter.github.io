@@ -1,4 +1,4 @@
-// color styles
+@import "./title/title.scss"; // color styles
 $colorMaps: (
   1: $darkShade,
   2: $darkShade75,
@@ -56,13 +56,6 @@ $colorMaps: (
   width: 159px;
   height: 57px;
 }
-// .colorText::after {
-//   content: "";
-//   display: block;
-//   clear: both;
-//   height: 0px;
-//   visibility: hidden;
-// }
 .colorTitle {
   font-family: $quicksand;
   font-style: normal;
@@ -144,7 +137,7 @@ $colorMaps: (
   color: $darkShade;
   font-weight: bold;
   font-size: 12px;
-  // line-height: 15px;
+  line-height: 15px;
   text-transform: uppercase;
 }
 .body_text {

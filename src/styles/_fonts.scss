@@ -33,3 +33,10 @@ $montserrat: "Montserrat", sans-serif;
   text-transform: uppercase;
   margin-bottom: #{$marg_bot}px;
 }
+@mixin mixinTitle() {
+  @include mixinFont($montserrat, bold, 12, 15);
+  color: $darkShade;
+  position: relative;
+  text-transform: uppercase;
+  // margin-bottom: #{$marg_bot}px;
+}
