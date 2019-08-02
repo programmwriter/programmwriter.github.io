@@ -7,5 +7,9 @@ $(document).ready(function() {
       $(this)
         .prevAll()
         .attr("src", "src/misc/images/rate-star_active.svg");
+
+      $(this)
+        .nextAll()
+        .attr("src", "src/misc/images/rate-star_deactive.svg");
     });
 });
