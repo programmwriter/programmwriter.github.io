@@ -1,0 +1,9 @@
+@mixin textFieldState {
+  font-family: $montserrat !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  color: $darkShade50 !important;
+  font-size: 12px !important;
+  line-height: 15px !important;
+  text-transform: uppercase !important;
+}

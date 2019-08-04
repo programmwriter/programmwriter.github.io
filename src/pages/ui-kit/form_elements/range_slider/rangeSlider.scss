@@ -1,16 +1,32 @@
-.handle {
-  width: 12px !important;
-  height: 12px !important;
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
-  border: 2px solid #ffffff !important;
-  border-radius: 10px !important;
-  -webkit-border-radius: 10px !important;
-  -moz-border-radius: 10px !important;
-  -ms-border-radius: 10px !important;
-  -o-border-radius: 10px !important;
-}
-.track {
-}
-.range {
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
+.rangeSlider {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+  }
+  &__amount {
+    @include textFieldState;
+  }
+  &__handle {
+    width: 12px !important;
+    height: 12px !important;
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+  }
+  &__track {
+    width: 266px;
+    height: 6px !important;
+    border: 1px solid rgba(31, 32, 65, 0.25) !important;
+    box-sizing: border-box !important;
+    border-radius: 3px !important;
+  }
+  &__range {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
+    box-sizing: border-box !important;
+  }
 }
