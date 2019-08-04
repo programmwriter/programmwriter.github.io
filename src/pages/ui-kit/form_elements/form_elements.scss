@@ -11,6 +11,7 @@
 @import "./like_buttons/likeButtons.scss";
 @import "./rate_buttons/rateButtons.scss";
 @import "./range_slider/rangeSlider.scss";
+@import "./buttons/button.scss";
 
 .form_elements {
   position: relative;
@@ -20,6 +21,7 @@
   margin: auto;
   display: flex;
   justify-content: flex-start;
+  z-index: 0;
 }
 .toxin__logo {
   position: absolute;

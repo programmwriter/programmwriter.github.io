@@ -34,10 +34,11 @@ $montserrat: "Montserrat", sans-serif;
   margin-bottom: #{$marg_bot}px;
 }
 @mixin mixinTitle() {
+  overflow: hidden;
   @include mixinFont($montserrat, bold, 12, 15);
   color: $darkShade;
   position: relative;
   text-transform: uppercase;
-  float: left;
+  // float: left;
   // margin-bottom: #{$marg_bot}px;
 }

@@ -12,14 +12,12 @@ $(document).ready(function() {
       },
       values: [5000, 10000],
       slide: function(event, ui) {
-        $("#amount").val(
+        $(".rangeSlider__amount").val(
           zero3(ui.values[0]) + "\u20bd - " + zero3(ui.values[1]) + "\u20bd"
         );
       }
     });
-
-    $("#slider-range").slider("option", "classes.ui-corner-all", null);
-    $("#amount").val(
+    $(".rangeSlider__amount").val(
       zero3($("#slider-range").slider("values", 0)) +
         "\u20bd - " +
         zero3($("#slider-range").slider("values", 1)) +

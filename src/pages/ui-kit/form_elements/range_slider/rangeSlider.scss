@@ -8,6 +8,7 @@
     @include textFieldState;
   }
   &__handle {
+    margin-top: -1px;
     width: 12px !important;
     height: 12px !important;
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
@@ -19,6 +20,7 @@
     -o-border-radius: 10px !important;
   }
   &__track {
+    // padding-top: 4px !important;
     width: 266px;
     height: 6px !important;
     border: 1px solid rgba(31, 32, 65, 0.25) !important;
@@ -28,5 +30,7 @@
   &__range {
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%) !important;
     box-sizing: border-box !important;
+    height: 6px !important;
+    margin-top: -1px;
   }
 }

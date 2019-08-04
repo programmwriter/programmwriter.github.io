@@ -1,0 +1,94 @@
+.button {
+  width: 99px;
+  height: 44px;
+  border-radius: 22px;
+  margin: 15px 20px 15px 0;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 0;
+  @include mixinFont($montserrat, bold, 12, 15);
+  cursor: pointer;
+
+  &_standart {
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    color: white;
+    border: 0;
+    &_active {
+      opacity: 0.5;
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  &_empty {
+    position: relative;
+    padding: 0;
+    width: 99px;
+    height: 44px;
+    background: white;
+    box-sizing: border-box;
+    color: $purple;
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    &_active::before {
+      opacity: 0.5;
+    }
+    &:hover::before {
+      opacity: 0.5;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 22px;
+      width: 99px;
+      height: 44px;
+      top: 0;
+      left: 0;
+      margin: -1px;
+      background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      z-index: -1;
+      box-sizing: inherit;
+    }
+  }
+  &_text {
+    border: 0;
+    color: $purple;
+    width: 65px;
+    &_active {
+      color: $darkShade50;
+    }
+    &:hover {
+      color: $darkShade50;
+    }
+  }
+  &_long {
+    position: relative;
+    width: 320px;
+    border: 0;
+    color: white;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border: 2px solid white;
+      border-left: 0;
+      border-bottom: 0;
+      transform: rotate(45deg);
+      top: 17px;
+      right: 17px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 15px;
+      height: 2px;
+      // border: 2px solid white;
+      background: white;
+      top: 22px;
+      right: 17px;
+    }
+  }
+}

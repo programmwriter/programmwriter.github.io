@@ -11,6 +11,7 @@ include /toggle/toggle.pug
 include /like_buttons/likeButtons.pug
 include /rate_buttons/rateButtons.pug
 include /range_slider/rangeSlider.pug
+include /buttons/button.pug
 
 
 -
@@ -60,6 +61,15 @@ include /range_slider/rangeSlider.pug
   .column_container
     .itemBlockDd(style="margin-top:0")
       +rangeSlider()
+    .itemBlockDd(style="margin-top:44px")
+      +titleH3("Buttons")
+      +button("click me","standart")
+      +button("click me","standart")
+      +button("click me","empty")
+      +button("click me","empty")
+      +button("click me","text")
+      +button("click me","text")
+      +button("перейти к оплате","long")
     
 
   
