@@ -1,0 +1,13 @@
+mixin richChButtons(arrText)
+  .richChButtons
+    each val in arrText
+      .richChButtons__itemBox
+        +richChButtonsItem(val.label,val.desc)
+
+
+mixin richChButtonsItem(label,desc)
+  label.richChButtons__item #{label}
+    input(class="richChButtons__input" type='checkbox')
+    img(class="richChButtons__check" src=require("./misc/images/check-gradient.svg"), alt="check" width="12" height="10")
+    span.richChButtons__checkmark
+  .richChButtons__desc #{desc}

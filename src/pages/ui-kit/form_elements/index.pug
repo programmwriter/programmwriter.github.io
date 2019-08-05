@@ -13,6 +13,10 @@ include /rate_buttons/rateButtons.pug
 include /range_slider/rangeSlider.pug
 include /buttons/button.pug
 include /pagination/pagination.pug
+include rich_checkbox_buttons/richChButtons.pug
+include bullet_list/bulletList.pug
+
+
 
 
 -
@@ -58,6 +62,13 @@ include /pagination/pagination.pug
       +likeButtons(["2","12"])
     .itemBlockDd(style="margin-top:44px")
       +rateButtons()
+    .itemBlockDd(style="margin-top:175px")
+      +dropdown('four',"dropdown","default ","Сколько гостей",optArr.guests,"bigBlock")(class="dropdown__input")
+    .itemBlockDd(style="margin-top:270px")
+      +titleH3("Rich Checkbox Buttons")
+      +richChButtons([{label: "Широкий коридор",desc:"Ширина коридоров в номере не менее 91 см"},{label: "Помощник для инвалидов",desc:" На 1 этаже вас встретит специалист и проводит до номера."}])
+      
+
 
   .column_container
     .itemBlockDd(style="margin-top:0")
@@ -72,7 +83,13 @@ include /pagination/pagination.pug
       +button("click me","text")
       +button("перейти к оплате","long")
     .itemBlockDd(style="margin-top:40px")
-      +pagination
+      +titleH3("pagination")
+      +pagination("1 – 12 из 100+ вариантов аренды")
+    .itemBlockDd(style="margin-top:170px")
+      +dropdown('six',"dropdown","default ","Сколько гостей",optArr.guests,"bigBlock")(class="dropdown__input")
+    .itemBlockDd(style="margin-top:270px")
+      +titleH3("bullet list")
+      +bulletList(["Нельзя с питомцами","Без вечеринок и мероприятий","Время прибытия — после 13:00, а выезд до 12:00 "])
     
 
   

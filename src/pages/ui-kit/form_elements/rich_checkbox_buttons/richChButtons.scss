@@ -1,0 +1,79 @@
+.richChButtons {
+  margin-top: 16px;
+  width: 266px;
+
+  /* The container of item*/
+  &__item {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: $darkShade50;
+    @include mixinFont($montserrat, bold, 14, 18);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  &__itemBox {
+    margin-bottom: 11px;
+    // overflow: hidden;
+  }
+  /* Hide the browser's default richChButtons */
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Hide the browser's default richChButtons */
+  &__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom richChButtons */
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    // background-color: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  // create check indikator
+  &__check {
+    display: none;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+  /* When the richChButtons is checked, add border color */
+  &__item &__input:checked ~ &__checkmark {
+    border: 1px solid #bc9cff;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  /* Show the chec indicator when checked */
+  &__item &__input:checked ~ &__check {
+    display: block;
+  }
+  &__content {
+    display: none;
+    position: absolute;
+    overflow: auto;
+    z-index: 1;
+  }
+  &__desc {
+    @include mixinFont($montserrat, normal, 12, 14);
+    color: $darkShade50;
+    padding-left: 30px;
+  }
+}

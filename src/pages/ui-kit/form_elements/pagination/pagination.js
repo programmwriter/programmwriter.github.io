@@ -1,21 +1,42 @@
 import "paginationjs";
 
-$(".pagination__box").pagination({
-  dataSource: [1, 2, 3, 4, 5, 6, 7],
-  pageSize: 1,
-  showGoInput: true,
-  showGoButton: true,
-  callback: function(data, pagination) {
-    // template method of yourself
-    var html = template(data);
-    dataContainer.html(html);
+$(function() {
+  function createDemo(name) {
+    var container = $("#pagination-" + name);
+    var sources = (function() {
+      var result = [];
+      for (var i = 1; i < 146; i++) {
+        result.push(i);
+      }
+      return result;
+    })();
+    var options = {
+      dataSource: sources,
+      pageRange: 1,
+      autoHidePrevious: true,
+      prevText: "",
+      nextText: "",
+      // autoHideNext: true,
+      callback: function(response, pagination) {
+        window.console && console.log(response, pagination);
+        var dataHtml = "<ul>";
+        $.each(response, function(index, item) {
+          dataHtml += "<li>" + item + "</li>";
+        });
+        dataHtml += "</ul>";
+        container.prev().html(dataHtml);
+      }
+    };
+    //$.pagination(container, options);
+    container.addHook("beforeInit", function() {
+      window.console && console.log("beforeInit...");
+    });
+    container.pagination(options);
+    container.addHook("beforePageOnClick", function() {
+      window.console && console.log("beforePageOnClick...");
+      //return false
+    });
+    return container;
   }
+  createDemo("box");
 });
-// $(".pagination__box").pagination({
-//   dataSource: [1, 2, 3, 4, 5, 6, 7, 195],
-//   callback: function(data, pagination) {
-//     // template method of yourself
-//     var html = template(data);
-//     $(".pagination__data").html(html);
-//   }
-// });

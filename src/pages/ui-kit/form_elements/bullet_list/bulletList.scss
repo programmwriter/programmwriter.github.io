@@ -1,0 +1,26 @@
+.bulletList {
+  width: 240px;
+  display: block;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 20px;
+  &__item {
+    position: relative;
+    @include mixinFont($montserrat, normal, 14, 24);
+    color: $darkShade75;
+    margin-bottom: 10px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: $darkShade25;
+      top: 7px;
+      left: -20px;
+    }
+  }
+}

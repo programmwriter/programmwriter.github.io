@@ -1,0 +1,5 @@
+mixin checkbox(text)
+  label.checkbox__item #{text}
+    input(class="checkbox__input" type='checkbox')
+    img(class="checkbox__check" src=require("./misc/images/check-gradient.svg"), alt="check" width="12" height="10")
+    span.checkbox__checkmark
